@@ -1,0 +1,4 @@
+sudo systemctl status gdrive-watcher    # проверить, что запустился без ошибок
+journalctl -u gdrive-watcher -f          # смотреть логи в реальном времени
+
+sudo systemctl restart gdrive-watcher # после обновления кода

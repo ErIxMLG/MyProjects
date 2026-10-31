@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+keys.json
+service_account.json
+drive_state.json

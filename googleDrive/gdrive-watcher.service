@@ -1,0 +1,23 @@
+[Unit]
+Description=Google Drive folder watcher with Telegram notifications
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Замените на реального пользователя, под которым будет работать скрипт
+# (не root; например, создайте отдельного пользователя или используйте существующего)
+User=gdrivebot
+WorkingDirectory=/home/gdrivebot/gdrive-watcher
+ExecStart=/home/gdrivebot/gdrive-watcher/venv/bin/python3 /home/gdrivebot/gdrive-watcher/main.py
+
+# Автоматически перезапускать при падении
+Restart=on-failure
+RestartSec=10
+
+# Логи будут доступны через: journalctl -u gdrive-watcher -f
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
