@@ -25,7 +25,7 @@
     произойдёт внеочередная проверка и придёт итог.
 
     Запуск (постоянный процесс, опрос раз в CHECK_INTERVAL секунд, по дефолту 5 минут): 
-        python3 gdrive_watcher.py
+        python3 main.py
 
     Свой интервал опроса (в секундах):
-        python3 gdrive_watcher.py --interval 60
+        python3 main.py --interval 60
